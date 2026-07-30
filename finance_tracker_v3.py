@@ -77,7 +77,12 @@ def main():
 def save_expenses(expenses):
     with open("expenses.txt", "w") as f:
         for expense in expenses:
-            f.write(f"{expense['name']},{expense['amount']},{expense['category']}\n")
+            name = expense["name"]
+            amount = expense["amount"]
+            category = expense["category"]
+
+            f.write(f"{name},{amount},{category}\n")
+
     print("Expenses saved to expenses.txt")
 
 
